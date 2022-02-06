@@ -1,4 +1,4 @@
-Recently I've encountered Sonar's [rule](https://rules.sonarsource.com/csharp/RSPEC-3247), which suggest replace
+Recently I've encountered Sonar's [rule](https://rules.sonarsource.com/csharp/RSPEC-3247), which suggests to replace
 ```csharp
 if (x is Fruit)  // Noncompliant
 {
@@ -14,11 +14,11 @@ if (x is Fruit fruit)
   // ...
 }
 ```
-to avoid double casting.
+in order to avoid double casting.
 
-I check [System.Private.CoreLib](https://github.com/dotnet/runtime/tree/c5c7967ddccc46c84c98c0e8c7e00c3009c65894/src/libraries/System.Private.CoreLib) and rule triggered on https://github.com/dotnet/runtime/blob/c5c7967ddccc46c84c98c0e8c7e00c3009c65894/src/libraries/System.Private.CoreLib/src/System/MemoryExtensions.cs#L2169
+I've checked [System.Private.CoreLib](https://github.com/dotnet/runtime/tree/c5c7967ddccc46c84c98c0e8c7e00c3009c65894/src/libraries/System.Private.CoreLib) and it's triggered on https://github.com/dotnet/runtime/blob/c5c7967ddccc46c84c98c0e8c7e00c3009c65894/src/libraries/System.Private.CoreLib/src/System/MemoryExtensions.cs#L2169
 
-Some blaming and I find that Stephen Toub is author of this code. Hm-m... This guy should understand such tricks. Therefore I should investigate more. Comment
+Some git blaming and I've found out that Stephen Toub is author of this code. Hm-m... This guy should understand such tricks. Therefore I should to dig deeper. Comment
 ```csharp
 // constrained call avoiding boxing for value types
 ```
