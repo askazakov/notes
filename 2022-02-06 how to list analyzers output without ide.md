@@ -1,4 +1,4 @@
-## How to
+## How to view analyzers info messages without ide 
 
 When you run `dotnet build` you get only errors and warnings in output. What if you like to see info level messages too?
 
@@ -35,3 +35,7 @@ to Program.cs
 (Don't forget about `ErrorLog`)
 
 ![](figs/2022-02-06/2022-02-06-15-09-01.png)
+
+```
+ℹ️ Starting in .NET 5, .NET compiler platform (Roslyn) analyzers are included with the .NET SDK and you don't need to install them separately. If your project targets .NET 5 or later, code analysis is enabled by default.
+```
