@@ -156,6 +156,9 @@ and result.
 
 Looks like single cast is not the best choice for reference type 
 
+There is IDE0038
+https://docs.microsoft.com/en-us/dotnet/fundamentals/code-analysis/style-rules/ide0020-ide0038
+
 TODO:
 
 - [ ] Investigate IL code
