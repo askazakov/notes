@@ -141,7 +141,7 @@ then
 ```
 dotnet run
 ```
-and result.
+and result
 
 |                              Method |      Mean |     Error |    StdDev |  Gen 0 | Gen 1 | Gen 2 | Allocated |
 |------------------------------------ |----------:|----------:|----------:|-------:|------:|------:|----------:|
